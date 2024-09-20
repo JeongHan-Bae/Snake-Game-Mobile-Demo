@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="header">
+    <div id="counter" class="multi_lang">Length: 1</div> <!-- Added class multi_lang and id for language switching -->
+    <div id="instructions" class="multi_lang">
+        <p id="desc1" class="multi_lang">Key instructions:</p>
+        <p id="desc2" class="multi_lang">Use the buttons below to control the direction</p>
+        <p id="desc3" class="multi_lang">Click the "Restart" button to restart the game</p>
+    </div>
+</div>
+
+<div id="gameContainer">
+    <canvas id="gameCanvas"></canvas>
+</div>
+
+<div id="controls">
+    <button id="restartButton" class="multi_lang">Restart</button> <!-- Restart button with language id -->
+    <div class="buttons-group">
+        <button id="upButton" class="multi_lang">Up</button> <!-- Direction buttons with language id -->
+        <div class="controls-row">
+            <button id="leftButton" class="multi_lang">Left</button>
+            <button id="rightButton" class="multi_lang">Right</button>
+        </div>
+        <button id="downButton" class="multi_lang">Down</button>
+    </div>
+</div>
+
+<!-- Language switch button -->
+<button id="languageButton">Switch to 中文</button>
+
+<script src="translations.js"></script>
+<script src="snake_game.js"></script>
+</body>
+</html>

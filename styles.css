@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center;     /* Center horizontally */
+    color: #fff;
+    font-family: "Microsoft YaHei", serif;
+    height: 100vh; /* Occupy the full height of the window */
+}
+
+/* Ensure header and controls are centered on the screen */
+#header, #controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameCanvas {
+    width: 90vw; /* 90% of the viewport width */
+    height: 90vw; /* Keep square ratio */
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border: 2px solid #fff;
+}
+
+/* Layout for the control buttons */
+#controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Occupy the full width of the screen */
+}
+
+/* Align the direction buttons */
+.buttons-group {
+    margin-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw; /* Button spacing 2vw */
+}
+
+.controls-row {
+    display: flex;
+    justify-content: center;
+    gap: 1vw; /* Horizontal button spacing 2vw */
+}
+
+/* Adjust button size */
+#controls button {
+    width: 10vw;
+    height: 10vw;
+    font-size: 2.2vw;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+/* Restart button spacing */
+#restartButton {
+    margin-right: auto; /* Large spacing on the left */
+    margin-left: 16vw;  /* Keep 16vw gap between Restart and other buttons */
+}
+
+/* Active button style */
+#controls button:active {
+    background-color: #555;
+}
+
+/* Responsive design for small screens */
+@media only screen and (max-width: 600px) and (min-aspect-ratio: 5/4) {
+    #controls button {
+        width: 10vw;
+        height: 10vw;
+        font-size: 20px;
+    }
+
+    #gameCanvas {
+        width: 90vw; /* 90% of viewport width */
+        height: 90vw; /* Keep square ratio */
+    }
+
+    #counter {
+        font-size: 3vw;
+    }
+
+    #instructions {
+        font-size: 3vw;
+    }
+}
