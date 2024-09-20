@@ -307,7 +307,7 @@ function restartGame() {
 
     // Draw the initial snake head
     ctx.fillStyle = '#ff0'; // Yellow
-    ctx.fillRect(initialX * cellSize, initialY * cellSize, cellSize, cellSize);
+    ctx.fillRect(initialX * cellSize + 1, initialY * cellSize + 1, cellSize - 2, cellSize - 2);
 
     // Draw the food
     const foodCoord = posToCoord(foodPos);
